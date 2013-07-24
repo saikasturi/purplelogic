@@ -1,9 +1,37 @@
-<!doctype html>	 
+<!doctype html>
 <html>
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">	
+		<script type="text/javascript" src="jquery-1.10.2.js"></script>
+		<script> 
+			var links = ["Home", "First", "Second"];
+			var list =[];
+			$(document).ready(function(){
+			
+	  			for (var i=0;i< links.length; i++){
+	 				//linkText = linkText + links[i] + "<br/>";
+	 				//console.log(linkText);
+	 				li = $("<li/>");
+	 				li.html(links[i]);
+	 				li.addClass("links");
+	 				//li.css("background-color", "#333333");
+
+	 				img = $("<img />");
+	 				img.attr("src", "img/solutions.jpeg");
+	 				img.addClass("img-circle")
+	 				li.append(img);
+	 				$("#link").append(li);
+	 				list.push(li);
+	  			}
+	  			console.log(list.length);
+
+	  			$("#link li").click(function(){
+	  				window.open("home.html",'_self');
+	  			});
+	  		});
+		</script>
 
 	</head>
 
@@ -32,8 +60,8 @@
 				
 				</div>
 
-				<div class="span1 links">
-					<li class="gradient-gray"> <i class="icon-th-large icon-white"> </i> <br/>
+				<div class="span1 menu" id="link">
+			<!--		<li class="gradient-gray"> <i class="icon-th-large icon-white"> </i> <br/>
 					mobility </li>
 					<li class="gradient-gray"> <i class="icon-globe icon-white"> </i> <br/>
 					cloud computing </li>
@@ -43,18 +71,18 @@
 					<br/>
 					<br/>
 
+
 					<li class="gradient-gray"> <i class="icon-briefcase icon-white"> </i> <br/>
 					government </li>
 					<li class="gradient-gray"> <i class="icon-book icon-white"> </i> <br/>
 					education </li>
 					<li class="gradient-gray"> <i class="icon-tint icon-white"> </i> <br/>
 					healthcare </li>
-
+-->
 				</div>
 			</div> 
 		</div>
 		<br clear="all" />
-
 	</body>
 
 </html>
